@@ -1,5 +1,5 @@
 # ICL-DESeq2_script
-This is a DESeq2 script to run DESeq2 in Bash without interactively using R (or R Studio). Specifically, it is suited for running on HPC.
+This is a DESeq2 script to run DESeq2 in Bash without interactively using R (or R Studio). Specifically, this script is suited for running on HPC.
 
 # TL;DR (Too long; Didn't read) version: #
 **First time:**
