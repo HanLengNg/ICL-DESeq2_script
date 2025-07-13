@@ -85,13 +85,13 @@ saveRDS <- saveRDS(gene_list, file = file.path(folder, "RNAseq_annotated_gene_li
 In the DESeq2 analysis, genes with very low count (of 5 or less) have been excluded from the analysis. Five is a conservative filtering parameter. The filtering value can be set to be more stringent.\
 One reason is that the analysis is faster.\
 Most likely, these genes are expressed at very low levels (or not at all) and outlier of expression from one replicate can skew the statistical analysis of what is truly a differentially expressed gene.\
-i.e. Genes that are kept:\
+i.e. Genes that are kept:
 |Gene|DMSO|DMSO|ConditionA|ConditionA|Total count|
 |----|----|----|----------|----------|-----------|
 |GeneA|0|0|3|3|6|
 |GeneB|1|0|2|2|5|
 
-i.e. Genes that are excluded:\
+i.e. Genes that are excluded:
 |Gene|DMSO|DMSO|ConditionA|ConditionA|Total count|
 |----|----|----|----------|----------|-----------|
 |GeneX|0|0|2|2|4|
