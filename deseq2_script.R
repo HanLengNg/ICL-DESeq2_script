@@ -123,7 +123,7 @@ normalised_count_filtered_annotated <- dplyr::left_join(normalised_count_filtere
                                                         by = c("ENSEMBL_GENEID"="ENSEMBL"))
 normalised_count_filtered_annotated <- normalised_count_filtered_annotated %>%
   dplyr::select("ENSEMBL_GENEID","SYMBOL",everything(),"GENENAME")
-write.csv(normalised_count_filtered_annotated, row.names = FALSE,
+write.csv(normalised_count_filtered_annotated, row.names = FALSE, quote = FALSE,
           file.path(output_dir,"filtered_RNA_normalised_count.csv"))
 cat("The normalised gene count (normalised_count_filtered_annotated) has been saved to:",file.path(output_dir,"filtered_RNA_normalised_count.csv"),"\n")
 
@@ -145,7 +145,7 @@ all_ddsRes_annotated <- dplyr::left_join(all_ddsRes_annotated, gene_list,
                                          by = c("ENSEMBL_GENEID"="ENSEMBL"))
 all_ddsRes_annotated <- all_ddsRes_annotated %>%
   dplyr::select("ENSEMBL_GENEID","SYMBOL",everything(),"GENENAME")
-write.csv(all_ddsRes_annotated, row.names = FALSE,
+write.csv(all_ddsRes_annotated, row.names = FALSE, quote = FALSE,
           file.path(output_dir,"all_filtered_genes_DESeq2_stats.csv"))
 cat("For all genes with a total count greater than 5 across all samples, the DESeq2 statistics (all_ddsRes_annotated) has been saved to:",
     file.path(output_dir,"all_filtered_genes_DESeq2_stats.csv"), "\n")
@@ -163,7 +163,7 @@ DEG_list_annotated <- dplyr::left_join(DEG_list_annotated, gene_list,
                                        by = c("ENSEMBL_GENEID"="ENSEMBL"))
 DEG_list_annotated <- DEG_list_annotated %>%
   dplyr::select("ENSEMBL_GENEID","SYMBOL",everything(),"GENENAME")
-write.csv(DEG_list_annotated, row.names = FALSE,
+write.csv(DEG_list_annotated, row.names = FALSE, quote = FALSE,
           file.path(output_dir,"DEG_list_stats.csv"))
 cat("All DEGs (DEG_list_annotated) have been saved to:", file.path(output_dir,"DEG_list_stats.csv"), "\n")
 
